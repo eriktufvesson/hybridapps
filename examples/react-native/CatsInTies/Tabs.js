@@ -12,20 +12,26 @@ var {
 } = React;
 
 var ScrollableTabView = require('react-native-scrollable-tab-view');
-var Cats = require('./Cats');
+
+var CatList = require('./CatList');
 var About = require('./About');
 var deviceWidth = Dimensions.get('window').width;
 
 class Tabs extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <ScrollableTabView>
           <ScrollView tabLabel="Cats" style={styles.tabView}>
-            <Cats />
+            <CatList navigator={this.props.navigator} />
           </ScrollView>
           <ScrollView tabLabel="About" style={styles.tabView}>
-            <About />
+            <About navigator={this.props.navigator} />
           </ScrollView>
         </ScrollableTabView>
       </View>
