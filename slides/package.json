@@ -1,0 +1,36 @@
+{
+  "name": "reveal.js",
+  "version": "3.0.0",
+  "description": "The HTML Presentation Framework",
+  "homepage": "http://lab.hakim.se/reveal-js",
+  "subdomain": "revealjs",
+  "scripts": {
+    "test": "grunt test",
+    "start": ""
+  },
+  "author": {
+    "name": "Hakim El Hattab",
+    "email": "hakim.elhattab@gmail.com",
+    "web": "http://hakim.se"
+  },
+  "repository": {},
+  "engines": {
+    "node": "~0.10.0"
+  },
+  "dependencies": {
+    "underscore": "~1.5.1",
+    "express": "~2.5.9",
+    "mustache": "~0.7.2",
+    "socket.io": "~0.9.16"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-connect": "^2.2.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/hakimel/reveal.js/blob/master/LICENSE"
+    }
+  ]
+}
