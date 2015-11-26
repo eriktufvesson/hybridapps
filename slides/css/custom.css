@@ -74,6 +74,17 @@ body {
   min-width: 345px;
 }
 
+.reveal .demo-frame img {
+  position: absolute;
+  left: 13px;
+  top: 104px;
+  width: 287px;
+  height: 509px;
+  margin: 0;
+  border: 0;
+}
+
+
 .reveal .demo-frame iframe {
   position: absolute;
   left: 13px;
@@ -89,4 +100,7 @@ body {
   box-shadow: none;
 }
 
-
+.links li {
+  font-size: 65%;
+  padding: 3px 0 !important;
+}

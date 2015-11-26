@@ -44,7 +44,7 @@
       <section>
         <h1>Hybridappar</h1>
         <h4>Utveckla mobilappar i HTML, Javascript och CSS</h4>
-        <p><small>Presenterat av <a href="mailto:erik.tufvesson@presis.se">Erik Tufvesson</a>, <a href="http://presis.se">Presis i Lund AB</a></small>
+        <p><small>Presenterat av <a href="mailto:erik.tufvesson@presis.se">Erik Tufvesson</a>, <a href="http://presis.se" target="_blank">Presis i Lund AB</a></small>
         </p>
 
         <aside class="notes">
@@ -67,9 +67,20 @@
       </section>
 
       <section>
+        <h3>Presentationen och all kod jag visar<br> idag finns tillgänglig på GitHub</h3>
+        <p>
+          <a href="https://github.com/eriktufvesson/presishybridapps" target="_blank">https://github.com/eriktufvesson/presishybridapps</a>
+        </p>
+        <aside class="notes">
+
+        </aside>
+      </section>
+
+      <section>
         <h3>Vad ska jag prata om idag?</h3>
         <ul>
           <li>Vad är en hybridapp?</li>
+          <li>Komma igång</li>
           <li>Val av ramverk</li>
           <li>Ionic Framework</li>
           <li>React Native</li>
@@ -86,9 +97,10 @@
         <img src="img/hybrid-app-architecture.png" style="float:left; max-width: 30%;">
         <div style="float: right; width: 70%;">
           <ul>
-            <li>En webbapplikation som visas i en inbyggd webbläsare (WebView)</li>
+            <li>Består av både Native- och icke-Native-komponenter</li>
+            <li>Vanligtvis en webbapp som visas i en inbyggd webbläsare (WebView)</li>
             <li>Kan kommunicera med telefonens mjukvara/hårdvara via plugins</li>
-            <li>Utvecklas i HTML5/CSS3 och Javascript</li>
+            <li>Utvecklas i HTML5/CSS3 och JavaScript</li>
             <li>En kodbas till både Android/iOS</li>
             <li>Kompileras till ett installerarbart/distribuerbart paket</li>
           </ul>
@@ -99,6 +111,41 @@
       </section>
 
       <section>
+        <h2>Komma igång</h2>
+
+        <aside class="notes"></aside>
+
+      </section>
+
+      <section>
+        <h2>Android</h2>
+        <p>
+          <a href="http://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html" target="_blank">Android Platform Guide (Cordova)</a>
+        </p>
+        <ul class="fragmentx">
+          <li>Java Development Kit (JDK) 7+</li>
+          <li>Android SDK (Android Studio)</li>
+          <li>Android-emulator (t.ex. <a href="https://www.genymotion.com/" target="_blank">Genymotion</a>)</li>
+        </ul>
+
+        <aside class="notes"></aside>
+      </section>
+
+      <section>
+        <h2>iOS</h2>
+        <p>
+          <a href="http://cordova.apache.org/docs/en/latest/guide/platforms/ios/index.html" target="_blank">iOS Platform Guide (Cordova)</a>
+        </p>
+        <ul class="fragmentx">
+          <li>OSX</li>
+          <li>Xcode</li>
+          <li>iOS-emulator (npm install -g ios-sim)</li>
+        </ul>
+
+        <aside class="notes"></aside>
+      </section>
+
+      <section>
         <h2>Vilka ramverk finns det?</h2>
         <ul class="fragmentx">
           <li>Apache Cordova (tidigare PhoneGap)</li>
@@ -106,20 +153,22 @@
           <li>Sencha Touch</li>
           <li>Appcelerator</li>
           <li>AppGyver</li>
-          <li>Onsen UI</li>
           <li>React Native (Facebook)</li>
           <li>NativeScript (Telerik)</li>
           <li>Xamarin (C#)</li>
+          <li>... och många fler</li>
         </ul>
 
         <aside class="notes">
+          De tre sista är speciella eftersom de inte körs i en web view utan kompileras till native-komponenter. Utvecklas dock inte
+          med HTML.
         </aside>
 
       </section>
 
       <section>
         <h2>Ionic Framework</h2>
-        <!--<img class="logo" src="img/ionic-logo.png" />-->
+        <img class="logo" src="img/ionic-logo.png" />
 
         <aside class="notes">
 
@@ -129,12 +178,18 @@
 
       <section>
         <h2>Ionic Framework</h2>
-
+        <p>
+          <a href="http://ionicframework.com/" target="_blank">http://ionicframework.com/</a>
+        </p>
         <ul>
-          <li>Bygger på AngularJS</li>
+          <li>AngularJS (v1.4)</li>
+          <li>Cordova</li>
           <li>Byggt för att se ut och kännas som Native</li>
           <li>Fokus på enkelhet och prestanda</li>
           <li>Enkelt att kommunicera med Native plugins (ngCordova)</li>
+          <li>Bra dokumentation</li>
+          <li>Stor community</li>
+          <li>Mogen kodbas (v1.0 lanserades maj 2015)</li>
         </ul>
         <aside class="notes">
 
@@ -162,65 +217,228 @@
         <ul>
           <li>SASS</li>
           <li>Anpassade gränssnitt för respektive plattform (iOS/Android)</li>
-          <li>Enkelt att customisera</li>
-          <li>Stort bibliotek av komponenter</li>
-          <li>Inbyggd ikon-font (Ionicons)</li>
+          <li>Stort bibliotek av komponenter (Angular directives)</li>
+        </ul>
+        <img src="img/ionic-lab.png" alt="Ionic lab">
+        <aside class="notes">
+
+        </aside>
+      </section>
+
+      <section>
+        <h2>Ionicons</h2>
+        <p><a href="https://lab.ionic.io" target="_blank">ionicons.com</a></p>
+        <p>Ikon-font med 700+ ikoner för både Android och iOS.</p>
+        <img src="img/ionicons.png" alt="Ionicons">
+      </section>
+
+      <section>
+        <h2>Ionic Resources</h2>
+        <h4>Skapa Ikoner och Splash screens mycket enkelt</h4>
+        <ul>
+          <li class="small">Skapa en bild (png, ai, psd) för din ikon och en för din splash screen.</li>
+          <li class="small">Placera dem i mappen "resources" döpta till "icon.png" resp "splash.png".</li>
+        </ul>
+        <pre>
+          <code class="bash">
+            > ionic resources
+            > # Klart!</code>
+        </pre>
+        <p><a href="http://ionicframework.com/docs/cli/icon-splashscreen.html" target="_blank">Länk till dokumentationen</a></p>
+      </section>
+
+      <section>
+        <h2>Ionic Creator</h2>
+        <a href="https://creator.ionic.io" target="_blank">creator.ionic.io</a>
+        <p>Skapa design-mockups med drag-n-drop.</p>
+        <img src="img/ionic-creator.png" alt="Ionic Creator">
+      </section>
+
+      <section>
+        <h2>Ionic Lab</h2>
+        <p><a href="https://lab.ionic.io" target="_blank">lab.ionic.io</a></p>
+        <p>Desktop-app som hjälpmedel vid utveckling.
+          <br>(Istället för att köra via kommandoprompten.)</p>
+
+        <img src="img/ionic-lab-2.png" alt="Ionic Lab">
+
+      </section>
+
+      <section>
+        <h2>Ionic View</h2>
+        <p><a href="http://view.ionic.io/" target="_blank">view.ionic.io</a></p>
+        <p>Dela och testa din app utan att publicera den.</p>
+        <img src="img/ionic-view.png" alt="Ionic View">
+
+      </section>
+
+
+      <section>
+        <div class="col preview demo-frame">
+          <iframe src="http://ionicframework.com/present-ionic/slides/demos/list/index.html"></iframe>
+        </div>
+        <div class="col code">
+          <h2>Kodexempel</h2>
+
+          <h4>Template</h4>
+          <pre>
+            <code class="html"><ion-list>
+
+  <ion-item ng-repeat="item in items">
+    List Item {{ item.id }}
+  </ion-item>
+
+</ion-list></code>
+          </pre>
+          
+          <h4>Controller</h4>
+          <pre>
+            <code class="js">angular.module('app')
+  .controller('ListController', function($scope) {
+    $scope.items = [{ id: 1}, { id: 2 } ...];
+  });</code>
+          </pre>
+        </div>
+      </section>
+
+      <section>
+        <div class="col preview demo-frame">
+          <img src="img/wthr-1.png" alt="wthr">
+          <!--<iframe class="live-demo" src="http://localhost:8100/"></iframe>-->
+        </div>
+        <div class="col code">
+          <h4>Exempel på färdig app</h4>
+
+          <h3>WTHR (VÄDR)</h3>
+          <p class="small">
+            Källkod: <a href="https://github.com/eriktufvesson/ionWeather" target="_blank">github.com/eriktufvesson/ionWeather</a><br>            
+            Play store: <a href="https://play.google.com/store/apps/details?id=se.presis.wthr" target="_blank">play.google.com/...se.presis.wthr</a>
+          </p>
+          <ul class="small">
+            <li>Väderapp skriven i Ionic Framework</li>
+            <li>Använder mobilens GPS för att hitta din position</li>
+            <li>Hämtar väderdata från yr.no baserat på hämtad position</li>
+            <li>Använder Google Maps API för att hämta uppgifter om ortsnamn samt att söka efter andra orter</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Sätta upp ett nytt projekt</h2>
+        <pre>
+          <code class="bash">
+            > npm install -g ionic cordova  
+            > # installerar ionic och cordova globalt på din dator
+            
+            > ionic start MyAwesomeApp  
+            > # skapar upp en ny app med ett default-utseende
+            
+            > cd MyAwesomeApp
+            > # en ny mapp skapas för appen
+            
+            > ionic serve  
+            > # startar upp appen i din webbläsare
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h1>DEMO</h1>
+
+        <aside class="notes">
+
+        </aside>
+      </section>
+
+      <section>
+        <h2>React Native</h2>
+        <img class="logo" src="img/react.svg" />
+
+        <aside class="notes">
+
+        </aside>
+      </section>
+
+
+      <section>
+        <h2>React Native</h2>
+        <p>
+          <a href="https://facebook.github.io/react-native/" target="_blank">https://facebook.github.io/react-native/</a>
+        </p>
+        <ul>
+          <li>Byggt av Facebook</li>
+          <li>React JS</li>
+          <li>Inte Cordova</li>
+          <li>Inte HTML</li>
+          <li>React JSX kompileras till Native-element</li>
+          <li>Logik körs i en egen tråd (JavaScriptCore)</li>
+          <li>Inte 100% samma kodbas till iOS/Android</li>
+          <li>Mer Native än en Cordova-app</li>
         </ul>
         <aside class="notes">
 
         </aside>
       </section>
 
-
       <section>
-        <div class="col preview demo-frame">
-          <!--<iframe src="http://ionicframework.com/present-ionic/slides/demos/list/index.html"></iframe>-->
-        </div>
-        <div class="col code">
-          <h2>Complex Lists</h2>
-          <ul style="margin-left: 70px">
-            <li>AngularJS Directive</li>
-            <li>Buttons exposed by swiping</li>
-            <li>Reorder</li>
-            <li>Delete</li>
-          </ul>
-          <pre>
-            <code data-trim="" contenteditable="" class="xml">
-<ion-list>
+        <h2>Kodexempel</h2>
 
-  <ion-item ng-repeat="item in items" item="item">
-    List Item {{ item.id }}
-  </ion-item>
-
-</ion-list>
-            </code>
-          </pre>
-        </div>
+        <img src="img/react-native-sample1.png" alt="Code sample 1" style="border: 0">
       </section>
 
       <section>
-        <div class="col preview demo-frame">
-          <!--<iframe class="live-demo" src="http://localhost:8100/"></iframe>-->
-        </div>
-        <div class="col code">
-          <h2>Demo!</h2>
+        <h2>Styling</h2>
 
-          <pre>
-            <code data-trim="" contenteditable="" class="xml">
-<ion-list>
+        <ul>
+          <li>Subset av CSS</li>
+          <li>Flexbox används för positionering</li>
+        </ul>
+        <aside class="notes">
 
-  <ion-item ng-repeat="item in items" item="item">
-    List Item {{ item.id }}
-  </ion-item>
-
-</ion-list>
-            </code>
-          </pre>
-        </div>
+        </aside>
       </section>
 
       <section>
-        <h1>LIVE!</h1>
+        <h2>Kodexempel</h2>
+
+        <img src="img/react-native-sample2.png" alt="Code sample 2" style="border: 0">
+      </section>
+      
+      <section>
+        <h2>Sätta upp ett nytt projekt</h2>
+        <pre>
+          <code class="bash">
+            > npm install -g react-native-cli  
+            > # installerar react-natives CLI globalt på din dator
+            
+            > react-native MyAwesomeReactNativeApp  
+            > # skapar upp en ny app med ett default-utseende
+            
+            > cd MyAwesomeReactNativeApp
+            > # en ny mapp skapas för appen
+            
+            > # starta en emulator, t.ex. Genymotion, nu...
+            
+            > react-native start  
+            > # startar React natives paketeringstjänst
+            
+            > react-native run-android
+            > # startar appen i emulatorn
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h1>DEMO</h1>
+
+        <aside class="notes">
+
+        </aside>
+      </section>
+      
+      <section>
+        <h2>Ionic 2</h2>
+        <img class="logo" src="img/ionic2.png" />
 
         <aside class="notes">
 
@@ -228,19 +446,130 @@
       </section>
 
 
-
       <section>
-        <h2>All kod finns tillgänglig!</h2>
-
+        <h2>Ionic 2</h2>
         <p>
-          <a href="https://github.com/eriktufvesson/ionWeather">https://github.com/eriktufvesson/ionWeather</a>
+          <a href="http://ionic.io/2" target="_blank">http://ionic.io/2</a>
         </p>
-
+        <ul>
+          <li>Alpha release</li>
+          <li>Angular 2</li>
+          <li>Förbättrad prestanda</li>
+          <li>Material design för Android</li>
+          <li>ES6/TypeScript</li>
+        </ul>
         <aside class="notes">
 
         </aside>
       </section>
 
+      <section>
+        <h2>Kodexempel</h2>
+
+        <pre>
+            <code class="jsx">import {Page, NavController} from 'ionic/ionic';
+import {Http} from 'angular2/http'; 
+import {CatDetail} from '../cat-detail/cat-detail';
+@Page({
+  templateUrl: 'app/cats/cats.html',
+})
+export class Cats {
+  constructor(http: Http, nav: NavController) {
+    this.nav = nav;    
+    this.http = http;    
+    this.cats = [];  
+  }
+  onInit() {
+    this.http.get('https://kittenapi.herokuapp.com/cats/funny/100')
+      .map(res => res.json())
+      .subscribe(data => {
+        console.log(data);
+        this.cats = data;
+      });
+  }
+  viewCat(cat) {
+    console.log('View cat', cat);
+    this.nav.push(CatDetail, {cat: cat});
+  }
+}</code>
+          </pre>
+      </section>
+      
+      <section>
+        <h2>Sätta upp ett nytt projekt</h2>
+        <pre>
+          <code class="bash">
+            > npm install -g ionic@alpha  
+            > # installerar ionic (v1 och v2) globalt på din dator
+            
+            > ionic start MyAwesomeIonic2App --v2 
+            > # skapar upp en ny app med ett default-utseende
+            
+            > cd MyAwesomeIonic2App
+            > # en ny mapp skapas för appen
+            
+            > ionic serve
+            > # startar appen i din webbläsare
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h1>DEMO</h1>
+
+        <aside class="notes">
+
+        </aside>
+      </section>
+      
+      <section>
+        <h2>Rekommenderade länkar</h2>
+        <ul>
+          <li>
+            Ionic Framework
+            <ul class="links">
+              <li>
+                <a target="_blank" href="http://ionicframework.com">ionicframework.com</a>
+              </li>
+              <li>
+                <a target="_blank" href="http://ionic.io">ionic.io</a>
+              </li>
+              <li>
+                <a target="_blank" href="http://mcgivery.com/100-ionic-framework-resources/">230+ Ionic Framework Resources</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            React Native
+            <ul class="links">
+              <li>
+                <a target="_blank" href="https://facebook.github.io/react-native/">Official site</a>
+              </li>
+              <li>
+                <a target="_blank" href="http://www.reactnative.com/">reactnative.com</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://code.facebook.com/posts/1189117404435352/react-native-for-android-how-we-built-the-first-cross-platform-react-native-app/">Facebook: How we built the first cross-platform React Native app</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Ionic 2
+            <ul class="links">
+              <li>
+                <a target="_blank" href="http://ionicframework.com/docs/v2/">Ionic 2 Docs</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.youtube.com/watch?v=bAlydPwFONY">Building cross platform apps with Ionic 2 – Adam Bradley (youtube)</a>
+              </li>
+              <li>  
+                <a target="_blank" href="https://github.com/adamdbradley/building-with-ionic2/tree/gh-pages/demos/ionic-conference-app">Exempel-app från presentationen ovan</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        
+      </section>
 
       <section>
         <h1>Frågor?</h1>
@@ -254,8 +583,16 @@
       <section>
         <h2>Kodkväll!</h2>
         <h3 class="orangex">Kom och koda tillsammans med oss!</h2>
-        <h2 class="orange fragment">Onsdag 21/10 kl 17-21</h2>
+        <h2 class="orange fragment">ZZZ xx/yy kl 17-21</h2>
         <h3 class="orange fragment">Vi bjuder på mat och dryck!</h2>
+      </section>
+
+      <section>
+        <h1>Tack för mig!</h1>
+        <br>
+        <br>
+        <br>
+        <h4><a href="mailto:erik.tufvesson@presis.se">erik.tufvesson@presis.se</a></h4>
       </section>
 
 

@@ -21,14 +21,6 @@ var screen = require('Dimensions').get('window');
 class AppContainer extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      navigator: null
-    }
-  }
-
-  navBack() {
-    Navigator.getContext(this);
   }
 
   render() {
@@ -46,15 +38,6 @@ class AppContainer extends Component {
         }}
         navigationBar={
           <View style={styles.navigationBar}>
-            <TouchableHighlight
-              style={styles.button}
-              underlayColor="#B5B5B5"
-              onPress={() => this.navBack()}>
-              <View>
-                <Text style={styles.buttonText}>Back</Text>
-              </View>
-            </TouchableHighlight>
-
             <Text style={{color: '#fff', fontSize: 18}}>Cats in Ties</Text>
           </View>
         }
