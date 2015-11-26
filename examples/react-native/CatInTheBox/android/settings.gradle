@@ -1,0 +1,3 @@
+rootProject.name = 'CatInTheBox'
+
+include ':app'
