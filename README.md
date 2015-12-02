@@ -2,7 +2,7 @@
 
 at Presis i Lund AB on December 3rd 2015
 
-### Länkar
+### Links
 
 * [Slides](http://eriktufvesson.github.io/presishybridapps/slides)
 * [Example 1 (Ionic)](https://github.com/eriktufvesson/presishybridapps/tree/master/examples/ionic/CatsWithHats)
