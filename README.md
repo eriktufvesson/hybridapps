@@ -11,4 +11,4 @@ at Presis i Lund AB on December 3rd 2015
 
 ### Get source code
 
-Just clone this repo. Code examples are in the the **Examples** folder.
+Just clone this repo or download the [zip](https://github.com/eriktufvesson/presishybridapps/archive/master.zip). Code examples are in the the **Examples** folder.
