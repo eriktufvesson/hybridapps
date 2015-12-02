@@ -9,3 +9,6 @@ at Presis i Lund AB on December 3rd 2015
 * [Example 2 (React Native)](https://github.com/eriktufvesson/presishybridapps/tree/master/examples/react-native/CatInTheBox)
 * [Example 3 (Ionic 2)](https://github.com/eriktufvesson/presishybridapps/tree/master/examples/ionic2/FunnyCats)
 
+### Get source code
+
+Just clone this repo. Code examples are in the the **Examples** folder.
