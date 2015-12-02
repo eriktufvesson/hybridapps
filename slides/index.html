@@ -119,7 +119,7 @@
 
       <section>
         <h2>Android</h2>
-        <p>
+        <p class="small">
           <a href="http://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html" target="_blank">Android Platform Guide (Cordova)</a>
         </p>
         <ul class="fragmentx">
@@ -133,7 +133,7 @@
 
       <section>
         <h2>iOS</h2>
-        <p>
+        <p class="small">
           <a href="http://cordova.apache.org/docs/en/latest/guide/platforms/ios/index.html" target="_blank">iOS Platform Guide (Cordova)</a>
         </p>
         <ul class="fragmentx">
@@ -182,13 +182,14 @@
           <a href="http://ionicframework.com/" target="_blank">http://ionicframework.com/</a>
         </p>
         <ul>
-          <li>AngularJS (v1.4)</li>
           <li>Cordova</li>
+          <li>AngularJS (v1.4)</li>
           <li>Byggt för att se ut och kännas som Native</li>
           <li>Fokus på enkelhet och prestanda</li>
           <li>Enkelt att kommunicera med Native plugins (ngCordova)</li>
           <li>Bra dokumentation</li>
           <li>Stor community</li>
+          <li>Över en miljon appar byggda med Ionic</li>
           <li>Mogen kodbas (v1.0 lanserades maj 2015)</li>
         </ul>
         <aside class="notes">
@@ -197,7 +198,7 @@
       </section>
 
 
-      <section>
+      <!--<section>
         <h2>Prestanda</h2>
 
         <ul>
@@ -208,10 +209,10 @@
         <aside class="notes">
 
         </aside>
-      </section>
+      </section>-->
 
 
-      <section>
+      <!--<section>
         <h2>Utseende</h2>
 
         <ul>
@@ -223,55 +224,51 @@
         <aside class="notes">
 
         </aside>
-      </section>
-
+      </section>-->
       <section>
-        <h2>Ionicons</h2>
-        <p><a href="https://lab.ionic.io" target="_blank">ionicons.com</a></p>
-        <p>Ikon-font med 700+ ikoner för både Android och iOS.</p>
-        <img src="img/ionicons.png" alt="Ionicons">
-      </section>
+        <h2>Hur fungerar Ionic?</h2>
 
-      <section>
-        <h2>Ionic Resources</h2>
-        <h4>Skapa Ikoner och Splash screens mycket enkelt</h4>
         <ul>
-          <li class="small">Skapa en bild (png, ai, psd) för din ikon och en för din splash screen.</li>
-          <li class="small">Placera dem i mappen "resources" döpta till "icon.png" resp "splash.png".</li>
+          <li>Angular Directives och Services</li>
+          <li>UI Router</li>
+          <li>ngCordova
+            <br><span class="small">(kommunicera med plugins)</span></li>
+          <li>Eget CLI
+            <br><span class="small">(Command Line Interface)</span></li>
         </ul>
+        <aside class="notes">
+
+        </aside>
+      </section>
+
+      <section>
+        <h2>Ionic CLI</h2>
+
         <pre>
           <code class="bash">
-            > ionic resources
-            > # Klart!</code>
+            > # kör i din webbläsare
+            > ionic serve
+            
+            > # lägg till en platform till din app
+            > ionic platform add [android|ios]
+            
+            > # kompilera din kod till android/ios
+            > ionic build [android|ios]
+            
+            > # starta din app i en emulator
+            > ionic emulate [android|ios]
+            
+            > # kör din app på en fysisk enhet (telefon)
+            > ionic run [android|ios]
+            
+            > # installera en plugin
+            > ionic plugin add ...
+          </code>
         </pre>
-        <p><a href="http://ionicframework.com/docs/cli/icon-splashscreen.html" target="_blank">Länk till dokumentationen</a></p>
+        <aside class="notes">
+
+        </aside>
       </section>
-
-      <section>
-        <h2>Ionic Creator</h2>
-        <a href="https://creator.ionic.io" target="_blank">creator.ionic.io</a>
-        <p>Skapa design-mockups med drag-n-drop.</p>
-        <img src="img/ionic-creator.png" alt="Ionic Creator">
-      </section>
-
-      <section>
-        <h2>Ionic Lab</h2>
-        <p><a href="https://lab.ionic.io" target="_blank">lab.ionic.io</a></p>
-        <p>Desktop-app som hjälpmedel vid utveckling.
-          <br>(Istället för att köra via kommandoprompten.)</p>
-
-        <img src="img/ionic-lab-2.png" alt="Ionic Lab">
-
-      </section>
-
-      <section>
-        <h2>Ionic View</h2>
-        <p><a href="http://view.ionic.io/" target="_blank">view.ionic.io</a></p>
-        <p>Dela och testa din app utan att publicera den.</p>
-        <img src="img/ionic-view.png" alt="Ionic View">
-
-      </section>
-
 
       <section>
         <div class="col preview demo-frame">
@@ -290,7 +287,7 @@
 
 </ion-list></code>
           </pre>
-          
+
           <h4>Controller</h4>
           <pre>
             <code class="js">angular.module('app')
@@ -299,6 +296,53 @@
   });</code>
           </pre>
         </div>
+      </section>
+
+      <section>
+        <h2>Ionicons</h2>
+        <p class="small"><a href="https://lab.ionic.io" target="_blank">ionicons.com</a></p>
+        <p>Ikon-font med 700+ ikoner för både Android och iOS.</p>
+        <img src="img/ionicons.png" alt="Ionicons">
+      </section>
+
+      <section>
+        <h2>Ionic Resources</h2>
+        <h4>Skapa Ikoner och Splash screens mycket enkelt</h4>
+        <ul>
+          <li class="small">Skapa en bild (png, ai, psd) för din ikon och en för din splash screen.</li>
+          <li class="small">Placera dem i mappen "resources" döpta till "icon.png" resp "splash.png".</li>
+        </ul>
+        <pre>
+          <code class="bash">
+            > ionic resources
+            > # Klart!</code>
+        </pre>
+        <p class="small"><a href="http://ionicframework.com/docs/cli/icon-splashscreen.html" target="_blank">Länk till dokumentationen</a></p>
+      </section>
+
+      <section>
+        <h2>Ionic Creator</h2>
+        <p class="small"><a href="https://creator.ionic.io" target="_blank">creator.ionic.io</a></p>
+        <p>Skapa design-mockups med drag-n-drop.</p>
+        <img src="img/ionic-creator.png" alt="Ionic Creator">
+      </section>
+
+      <section>
+        <h2>Ionic Lab</h2>
+        <p class="small"><a href="https://lab.ionic.io" target="_blank">lab.ionic.io</a></p>
+        <p>Desktop-app som hjälpmedel vid utveckling.
+          <br>(Istället för att köra via kommandoprompten.)</p>
+
+        <img src="img/ionic-lab-2.png" alt="Ionic Lab">
+
+      </section>
+
+      <section>
+        <h2>Ionic View</h2>
+        <p class="small"><a href="http://view.ionic.io/" target="_blank">view.ionic.io</a></p>
+        <p>Dela och testa din app utan att publicera den.</p>
+        <img src="img/ionic-view.png" alt="Ionic View">
+
       </section>
 
       <section>
@@ -311,20 +355,20 @@
 
           <h3>WTHR (VÄDR)</h3>
           <p class="small">
-            Källkod: <a href="https://github.com/eriktufvesson/ionWeather" target="_blank">github.com/eriktufvesson/ionWeather</a><br>            
-            Play store: <a href="https://play.google.com/store/apps/details?id=se.presis.wthr" target="_blank">play.google.com/...se.presis.wthr</a>
+            Källkod: <a href="https://github.com/eriktufvesson/ionWeather" target="_blank">github.com/eriktufvesson/ionWeather</a>
+            <br> Play store: <a href="https://play.google.com/store/apps/details?id=se.presis.wthr" target="_blank">play.google.com/...se.presis.wthr</a>
           </p>
           <ul class="small">
             <li>Väderapp skriven i Ionic Framework</li>
             <li>Använder mobilens GPS för att hitta din position</li>
-            <li>Hämtar väderdata från yr.no baserat på hämtad position</li>
+            <li>Hämtar väderdata från yr.no baserat på din position</li>
             <li>Använder Google Maps API för att hämta uppgifter om ortsnamn samt att söka efter andra orter</li>
           </ul>
         </div>
       </section>
 
       <section>
-        <h2>Sätta upp ett nytt projekt</h2>
+        <h3>Sätta upp ett nytt projekt i Ionic</h3>
         <pre>
           <code class="bash">
             > npm install -g ionic cordova  
@@ -351,6 +395,18 @@
       </section>
 
       <section>
+        <div class="col demo android">
+          <iframe id="demo-android" src="http://eriktufvesson.github.io/presishybridapps/examples/CatsWithHats/?ionicplatform=android"
+          frameborder="0"></iframe>
+        </div>
+        <div class="col demo ios">
+          <iframe id="demo-ios" src="http://eriktufvesson.github.io/presishybridapps/examples/CatsWithHats/?ionicplatform=ios"
+          frameborder="0"></iframe>
+        </div>
+
+      </section>
+
+      <section>
         <h2>React Native</h2>
         <img class="logo" src="img/react.svg" />
 
@@ -362,14 +418,15 @@
 
       <section>
         <h2>React Native</h2>
-        <p>
+        <p class="small">
           <a href="https://facebook.github.io/react-native/" target="_blank">https://facebook.github.io/react-native/</a>
         </p>
-        <ul>
+        <ul class="small">
           <li>Byggt av Facebook</li>
           <li>React JS</li>
           <li>Inte Cordova</li>
           <li>Inte HTML</li>
+          <li>ES6/ES7</li>
           <li>React JSX kompileras till Native-element</li>
           <li>Logik körs i en egen tråd (JavaScriptCore)</li>
           <li>Inte 100% samma kodbas till iOS/Android</li>
@@ -382,6 +439,7 @@
 
       <section>
         <h2>Kodexempel</h2>
+        <h3>React Native Component</h3>
 
         <img src="img/react-native-sample1.png" alt="Code sample 1" style="border: 0">
       </section>
@@ -390,8 +448,8 @@
         <h2>Styling</h2>
 
         <ul>
-          <li>Subset av CSS</li>
-          <li>Flexbox används för positionering</li>
+          <li>Delmängd av CSS</li>
+          <li>Flexbox för positionering</li>
         </ul>
         <aside class="notes">
 
@@ -400,10 +458,11 @@
 
       <section>
         <h2>Kodexempel</h2>
+        <h3>React Native Styling</h3>
 
         <img src="img/react-native-sample2.png" alt="Code sample 2" style="border: 0">
       </section>
-      
+
       <section>
         <h2>Sätta upp ett nytt projekt</h2>
         <pre>
@@ -435,7 +494,7 @@
 
         </aside>
       </section>
-      
+
       <section>
         <h2>Ionic 2</h2>
         <img class="logo" src="img/ionic2.png" />
@@ -448,12 +507,13 @@
 
       <section>
         <h2>Ionic 2</h2>
-        <p>
+        <p class="small">
           <a href="http://ionic.io/2" target="_blank">http://ionic.io/2</a>
         </p>
         <ul>
           <li>Alpha release</li>
           <li>Angular 2</li>
+          <li>Webpack</li>
           <li>Förbättrad prestanda</li>
           <li>Material design för Android</li>
           <li>ES6/TypeScript</li>
@@ -470,9 +530,8 @@
             <code class="jsx">import {Page, NavController} from 'ionic/ionic';
 import {Http} from 'angular2/http'; 
 import {CatDetail} from '../cat-detail/cat-detail';
-@Page({
-  templateUrl: 'app/cats/cats.html',
-})
+
+@Page({ templateUrl: 'app/cats/cats.html' })
 export class Cats {
   constructor(http: Http, nav: NavController) {
     this.nav = nav;    
@@ -482,19 +541,15 @@ export class Cats {
   onInit() {
     this.http.get('https://kittenapi.herokuapp.com/cats/funny/100')
       .map(res => res.json())
-      .subscribe(data => {
-        console.log(data);
-        this.cats = data;
-      });
+      .subscribe(data => { this.cats = data; });
   }
   viewCat(cat) {
-    console.log('View cat', cat);
     this.nav.push(CatDetail, {cat: cat});
   }
 }</code>
           </pre>
       </section>
-      
+
       <section>
         <h2>Sätta upp ett nytt projekt</h2>
         <pre>
@@ -515,13 +570,73 @@ export class Cats {
       </section>
 
       <section>
+        <h2>Ionic 2 CLI</h2>
+        <h4>Alla funktioner från Ionic v1</h4>
+        <h3>+</h3>
+        <pre>
+          <code class="bash">
+            > # Lägg till en ny sida i din app
+            > ionic generate page min-sida
+            
+            > # Skapar en ny mapp med ett nytt skal för en sida
+            
+            > # - app
+            > # --- min-sida
+            > # ----- min-sida.html
+            > # ----- min-sida.js
+            > # ----- min-sida.scss
+          </code>
+        </pre>
+        <aside class="notes">
+
+        </aside>
+      </section>
+
+      <section>
+        <h2>Tips för debugging</h2>
+        <h4>Aktivera Source Maps i Webpack</h4>
+        <pre>
+          <code class="js">
+            // webpack.config.js
+            
+            ...
+            
+            module.exports = {
+              entry: [...],
+              output: {...},
+              module: {...},
+              resolve: {...},
+              sassLoader: {...},
+              /* Add this line */
+              devtool: 'source-map'
+            };
+          </code>
+        </pre>
+        <aside class="notes">
+
+        </aside>
+      </section>
+
+      <section>
         <h1>DEMO</h1>
 
         <aside class="notes">
 
         </aside>
       </section>
-      
+
+      <section>
+        <div class="col demo android">
+          <iframe id="demo-android" src="http://eriktufvesson.github.io/presishybridapps/examples/FunnyCats/?ionicplatform=android"
+          frameborder="0"></iframe>
+        </div>
+        <div class="col demo ios">
+          <iframe id="demo-ios" src="http://eriktufvesson.github.io/presishybridapps/examples/FunnyCats/?ionicplatform=ios"
+          frameborder="0"></iframe>
+        </div>
+
+      </section>
+
       <section>
         <h2>Rekommenderade länkar</h2>
         <ul>
@@ -530,6 +645,9 @@ export class Cats {
             <ul class="links">
               <li>
                 <a target="_blank" href="http://ionicframework.com">ionicframework.com</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://forum.ionicframework.com/">Ionic Forum</a>
               </li>
               <li>
                 <a target="_blank" href="http://ionic.io">ionic.io</a>
@@ -562,13 +680,13 @@ export class Cats {
               <li>
                 <a target="_blank" href="https://www.youtube.com/watch?v=bAlydPwFONY">Building cross platform apps with Ionic 2 – Adam Bradley (youtube)</a>
               </li>
-              <li>  
+              <li>
                 <a target="_blank" href="https://github.com/adamdbradley/building-with-ionic2/tree/gh-pages/demos/ionic-conference-app">Exempel-app från presentationen ovan</a>
               </li>
             </ul>
           </li>
         </ul>
-        
+
       </section>
 
       <section>
@@ -612,7 +730,7 @@ export class Cats {
           history: true,
           center: true,
 
-          transition: 'slide', // none/fade/slide/convex/concave/zoom
+          transition: 'fade', // none/fade/slide/convex/concave/zoom
 
           //parallaxBackgroundImage: '/img/presis_bg.png',
 

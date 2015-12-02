@@ -76,5 +76,6 @@ module.exports = {
     includePaths: [
       path.resolve(__dirname, "node_modules", 'ionic-framework', 'dist', 'src', 'scss')
     ]
-  }
+  },
+  devtool: 'source-map'
 };

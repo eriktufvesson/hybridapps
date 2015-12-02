@@ -104,3 +104,23 @@ body {
   font-size: 65%;
   padding: 3px 0 !important;
 }
+
+.demo.android {
+  width: 460px;
+  height: 740px;
+}
+
+.demo.android iframe {
+  width: 320px;
+  height: 560px;
+}
+
+.demo.ios {
+  width: 460px;
+  height: 740px;
+}
+
+.demo.ios iframe {
+  width: 320px;
+  height: 560px;
+}
