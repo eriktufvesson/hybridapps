@@ -1,0 +1,36 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<navbar pageTitle="Shop"></navbar>
+
+<ion-content class="home">
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <img src="img/sale.png" alt="sale" (click)="navSale()">
+        <button full clear class="text-left icon-right" (click)="navSale()">
+          Shop now
+          <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <div class="item item-divider shop-section-title">
+    <span class="title-copy">Popular Now</span>
+    <a class="button button-small button-dark section-action" (click)="navPopular()">More</a>
+  </div>
+  <ion-card class="col-50" (click)="addToCart(product)" *ngFor="#product of products">
+    <img [src]="product.imageUrl" alt="{{product.name}}">
+    <ion-card-content>
+      <p class="product-name">
+        {{product.name}}
+      </p>
+      <p class="product-description">
+        <b>895 kr</b> - The most popular product
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

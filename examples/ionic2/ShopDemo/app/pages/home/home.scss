@@ -1,0 +1,47 @@
+.home {
+  
+  background-color: #EEE;
+  
+  // ion-card {
+  //   margin: 0;
+  // }
+  .col-50 {
+    float: left;
+    width: 45%;
+    margin: 2.5%;
+  }
+}
+
+.product-name {
+  
+}
+
+.product-description {
+    color: #959595;
+    font-size: 12px;
+    margin: 2px 0 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.shop-section-title {
+    background-color: transparent;
+    border: none;
+    padding: 10px 10px 0;
+    font-size: 14px;
+}
+
+.shop-section-title .title-copy {
+    color: #515151;
+    height: 24px;
+    line-height: 24px;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(255,0,0,0.8);
+  font-size: 1rem;
+}

@@ -1,0 +1,31 @@
+body {
+    background-color: #444;
+    background-image: url(../img/presis_bg_2.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.reveal .slides section .fragment.highlight-current-blue.current-fragment {
+    color: #F56E0F;
+}
+
+.reveal h1.orange,
+.reveal h2.orange,
+.reveal h3.orange,
+.reveal h4.orange {
+    color: #EB9B2E;
+    /*#F56E0F;*/
+}
+
+.reveal ul {
+    /*list-style-type: none;*/
+}
+
+.reveal ul li {
+    font-family: Montserrat, Impact, sans-serif;
+    padding: 10px 0;
+}
+
+.reveal .small {
+    font-size: 65%;
+}

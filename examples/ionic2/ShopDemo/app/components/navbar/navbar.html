@@ -1,0 +1,24 @@
+<!--
+  Generated template for the Navbar component.
+
+  See https://angular.io/docs/ts/latest/api/core/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+<ion-navbar *navbar primary>
+
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-buttons end>
+    <button (click)="navSearch()">
+      <ion-icon name="search"></ion-icon>
+    </button>
+    <button (click)="navCart()">
+      <ion-icon name="cart"></ion-icon>
+      <ion-badge class="cart-badge">{{cartSize}}</ion-badge>
+    </button>
+  </ion-buttons>
+
+  <ion-title>{{title}}</ion-title>
+
+</ion-navbar>
