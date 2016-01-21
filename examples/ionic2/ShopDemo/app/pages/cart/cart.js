@@ -1,7 +1,7 @@
 import {Page, NavController} from 'ionic/ionic';
-import {Injectable, EventEmitter} from 'angular2/core';
-//import {Observable} from 'rxjs/Observable';
-//import 'rxjs/add/operator/share';
+import {Injectable} from 'angular2/core';
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/operator/share';
 
 /*
   Generated class for the CartPage page.
@@ -20,36 +20,21 @@ export class CartPage {
 
 @Injectable()
 export class Cart {
-  //products: Array<string>;
-  //_cartObserver: any;
-  //_products: Array<any>;
-  _broadcaster: EventEmitter = new EventEmitter();
-  rxEmitter: any;
+  cartItems$: Observable<Array<any>>;
+  private _cartObserver: any;
+  private _products: Array<any>;
   
   constructor() {
-    //this.products = [];
-    //this.broadcaster = broadcaster;
-    //this._cartObserver = null;
-    //this.products = Observable(observer => {
-    //  this._cartObserver = observer;
-    //}).share();
-    this.rxEmitter = this._broadcaster;
+    this.cartItems$ = new Observable(observer => {
+      this._cartObserver = observer;
+    });
     
     this._products = [];
   }
   
-  getEmitter() {
-    return this._broadcaster;
-  }
-  
   add(product) {
-    // return Observable.create(observer => {
-    //   this._products.push(product);
-    //   console.log(this._products);
-    //   observer.next(this._products);
-    // });
     this._products.push(product);
     console.log(this._products);
-    this.rxEmitter.emit(this._products);
+    this._cartObserver.next(this._products);
   }
 }

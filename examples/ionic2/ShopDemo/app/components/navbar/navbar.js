@@ -22,8 +22,8 @@ export class Navbar {
     this.cart = cart;
     this.cartSize = 0;
     
-    cart.rxEmitter.subscribe((products) => {
-      console.log('rxEmitter event caught', products);
+    cart.cartItems$.subscribe((products) => {
+      console.log('cartItems$ has changed', products);
       this.cartSize = products.length;
     })
   }
