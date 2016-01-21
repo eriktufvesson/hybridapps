@@ -1,4 +1,5 @@
 import {Component, CORE_DIRECTIVES, Input} from 'angular2/core';
+import {NgIf} from 'angular2/common';
 import {IONIC_DIRECTIVES, NavController} from 'ionic/ionic';
 import {CartPage, Cart} from '../../pages/cart/cart';
 import {ListPage} from '../../pages/list/list';
@@ -12,7 +13,7 @@ import {ListPage} from '../../pages/list/list';
 @Component({
   selector: 'navbar',
   templateUrl: 'build/components/navbar/navbar.html',
-  directives: [IONIC_DIRECTIVES] // makes all Ionic directives available to your component
+  directives: [IONIC_DIRECTIVES, NgIf] // makes all Ionic directives available to your component
 })
 export class Navbar {
   @Input() pageTitle;

@@ -15,7 +15,7 @@
     </button>
     <button (click)="navCart()">
       <ion-icon name="cart"></ion-icon>
-      <ion-badge class="cart-badge">{{cartSize}}</ion-badge>
+      <ion-badge *ngIf="cartSize" class="cart-badge">{{cartSize}}</ion-badge>
     </button>
   </ion-buttons>
 
