@@ -2,7 +2,7 @@ import {Page, NavController} from 'ionic/ionic';
 import {ListPage} from '../list/list';
 import {GridPage} from '../grid/grid';
 import {Navbar} from '../../components/navbar/navbar';
-import {Cart} from '../../pages/cart/cart';
+import {Cart} from '../../pages/cart/cartService';
 import {Products} from '../../providers/products/products';
 import {NgFor} from 'angular2/common';
 

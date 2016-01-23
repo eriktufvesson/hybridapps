@@ -2,7 +2,8 @@ import {App, IonicApp, Platform, Config} from 'ionic/ionic';
 import {TabsPage} from './pages/tabs/tabs';
 import {ListPage} from './pages/list/list';
 import {GridPage} from './pages/grid/grid';
-import {CartPage, Cart} from './pages/cart/cart';
+import {CartPage} from './pages/cart/cart';
+import {Cart} from './pages/cart/cartService';
 import {Products} from './providers/products/products';
 
 @App({

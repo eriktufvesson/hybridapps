@@ -1,7 +1,8 @@
 import {Component, CORE_DIRECTIVES, Input} from 'angular2/core';
 import {NgIf} from 'angular2/common';
 import {IONIC_DIRECTIVES, NavController} from 'ionic/ionic';
-import {CartPage, Cart} from '../../pages/cart/cart';
+import {CartPage} from '../../pages/cart/cart';
+import {Cart} from '../../pages/cart/cartService';
 import {ListPage} from '../../pages/list/list';
 
 /*
@@ -20,11 +21,11 @@ export class Navbar {
   constructor(nav: NavController, cart: Cart) {
     this.nav = nav;
     this.cart = cart;
-    this.cartSize = 0;
-    
+    this.products = cart.getProducts();
+
     cart.cartItems$.subscribe((products) => {
       console.log('cartItems$ has changed', products);
-      this.cartSize = products.length;
+      this.products = products;
     })
   }
 

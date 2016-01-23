@@ -17,7 +17,8 @@ export class Products {
       price: 123,
       stock: 10,
       sale: true,
-      originalPrice: 199
+      originalPrice: 199,
+      popular: true
     },
     {
       id: 2,
@@ -27,7 +28,8 @@ export class Products {
       price: 123,
       stock: 10,
       sale: true,
-      originalPrice: 199
+      originalPrice: 199,
+      popular: false
     },
     {
       id: 3,
@@ -37,7 +39,8 @@ export class Products {
       price: 123,
       stock: 10,
       sale: true,
-      originalPrice: 199
+      originalPrice: 199,
+      popular: true
     },
     {
       id: 4,
@@ -47,7 +50,8 @@ export class Products {
       price: 123,
       stock: 10,
       sale: true,
-      originalPrice: 199
+      originalPrice: 199,
+      popular: true
     }];
   }
 }

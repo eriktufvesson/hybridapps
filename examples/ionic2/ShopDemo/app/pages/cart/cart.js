@@ -1,7 +1,6 @@
 import {Page, NavController} from 'ionic/ionic';
-import {Injectable} from 'angular2/core';
-import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/operator/share';
+import {NgFor} from 'angular2/common';
+import {Cart} from './cartService';
 
 /*
   Generated class for the CartPage page.
@@ -11,30 +10,15 @@ import 'rxjs/add/operator/share';
 */
 @Page({
   templateUrl: 'build/pages/cart/cart.html',
+  directives: [NgFor]
 })
 export class CartPage {
-  constructor(nav: NavController) {
+  constructor(nav: NavController, cart: Cart) {
     this.nav = nav;
-  }
-}
-
-@Injectable()
-export class Cart {
-  cartItems$: Observable<Array<any>>;
-  private _cartObserver: any;
-  private _products: Array<any>;
-  
-  constructor() {
-    this.cartItems$ = new Observable(observer => {
-      this._cartObserver = observer;
-    });
+    this.cartItems = cart.getProducts();
     
-    this._products = [];
+    cart.cartItems$.subscribe((products) => {
+      this.cartItems = products;
+    });
   }
-  
-  add(product) {
-    this._products.push(product);
-    console.log(this._products);
-    this._cartObserver.next(this._products);
-  }
-}
+} 

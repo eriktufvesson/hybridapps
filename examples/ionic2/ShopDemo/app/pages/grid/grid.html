@@ -1,99 +1,16 @@
 <navbar pageTitle="Popular products"></navbar>
 
 <ion-content class="grid">
-
-  <ion-row>
-
-    <ion-col>
-      <ion-card>
-        <img src="img/sample_images/products/1.jpeg" alt="product">
-        <ion-card-content>
-          <p class="product-name">
-            Product 1
-          </p>
-          <p class="product-description">
-            <b>895 kr</b> - The most popular product
-          </p>
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-
-    <ion-col>
-      <ion-card>
-        <img src="img/sample_images/products/2.jpeg" alt="product">
-        <ion-card-content>
-          <p class="product-name">
-            Product 2
-          </p>
-          <p class="product-description">
-            <b>895 kr</b> - The most popular product
-          </p>
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-
-  </ion-row>
-  <ion-row>
-
-    <ion-col>
-      <ion-card>
-        <img src="img/sample_images/products/3.jpeg" alt="product">
-        <ion-card-content>
-          <p class="product-name">
-            Product 3
-          </p>
-          <p class="product-description">
-            <b>895 kr</b> - The most popular product
-          </p>
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-
-    <ion-col>
-      <ion-card>
-        <img src="img/sample_images/products/4.jpeg" alt="product">
-        <ion-card-content>
-          <p class="product-name">
-            Product 4
-          </p>
-          <p class="product-description">
-            <b>895 kr</b> - The most popular product
-          </p>
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-
-  </ion-row>
-  <ion-row>
-
-    <ion-col>
-      <ion-card>
-        <img src="img/sample_images/products/5.jpeg" alt="product">
-        <ion-card-content>
-          <p class="product-name">
-            Product 5
-          </p>
-          <p class="product-description">
-            <b>895 kr</b> - The most popular product
-          </p>
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-
-    <ion-col>
-      <ion-card>
-        <img src="img/sample_images/products/6.jpeg" alt="product">
-        <ion-card-content>
-          <p class="product-name">
-            Product 6
-          </p>
-          <p class="product-description">
-            <b>895 kr</b> - The most popular product
-          </p>
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-
-  </ion-row>
-
+  <ion-card class="col-50" (click)="addToCart(product)" 
+            *ngFor="#product of products | filter:'popular':true">
+    <img [src]="product.imageUrl" alt="{{product.name}}">
+    <ion-card-content>
+      <p class="product-name">
+        {{product.name}}
+      </p>
+      <p class="product-description">
+        <b>{{product.price}} kr</b> - {{product.description}}
+      </p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

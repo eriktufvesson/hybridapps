@@ -2,15 +2,15 @@
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="#item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-left></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-right>
-        {{item.note}}
-      </div>
-    </button>
+    <ion-item *ngFor="#product of products | filter:'sale':true" (click)="navProduct($event, product)">
+      <ion-avatar item-left>
+        <img [src]="product.imageUrl">
+      </ion-avatar>
+      <h2>{{product.name}}</h2>
+      <p>
+        <span class="sale-price">{{product.price | currency:'SEK'}}</span>
+        <span class="original-price">{{product.originalPrice | currency:'SEK'}}</span>
+      </p>
+    </ion-item>
   </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
 </ion-content>
