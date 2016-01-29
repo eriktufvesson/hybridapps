@@ -1,5 +1,4 @@
-import {Page, NavController} from 'ionic/ionic';
-import {NgFor} from 'angular2/common';
+import {Page, NavController, NavParams, ViewController} from 'ionic/ionic';
 import {Cart} from './cartService';
 
 /*
@@ -9,8 +8,7 @@ import {Cart} from './cartService';
   Ionic pages and navigation.
 */
 @Page({
-  templateUrl: 'build/pages/cart/cart.html',
-  directives: [NgFor]
+  templateUrl: 'build/pages/cart/cart.html'
 })
 export class CartPage {
   constructor(nav: NavController, cart: Cart) {
@@ -22,3 +20,18 @@ export class CartPage {
     });
   }
 } 
+
+@Page({
+  templateUrl: 'build/pages/cart/add-to-cart.html'
+})
+export class AddToCartModal {
+  constructor(viewCtrl: ViewController, navParams: NavParams) {
+    this.viewCtrl = viewCtrl;
+    this.product = navParams.get('product');
+  }
+  
+  dismiss() {
+    let data = { 'test': 'test2' };
+    this.viewCtrl.dismiss(data);
+  }
+}

@@ -1,0 +1,11 @@
+<ion-card class="col-50" (click)="navProduct(product)">
+  <img [src]="product.imageUrl" alt="{{product.name}}">
+  <ion-card-content>
+    <p class="product-name">
+      {{product.name}}
+    </p>
+    <p class="product-description">
+      <b>{{product.price}} kr</b> - {{product.description}}
+    </p>
+  </ion-card-content>
+</ion-card>

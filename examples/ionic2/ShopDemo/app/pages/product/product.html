@@ -1,13 +1,29 @@
-<!--
-  Generated template for the ProductPage page.
+<navbar pageTitle="{{product.name}}"></navbar>
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-navbar *navbar>
-  <ion-title>product</ion-title>
-</ion-navbar>
-
-<ion-content padding class="product">
-  
+<ion-content class="product">
+  <ion-card>
+    <img [src]="product.imageUrl" alt="{{product.name}}">
+    <ion-card-content>
+      <h1>
+        {{product.name}}
+      </h1>
+      <h3>
+        {{product.description}}
+      </h3>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="card" primary></ion-icon>
+          {{product.price | currency:"USD":true}}
+        </ion-item>
+        <ion-item>
+          <ion-icon name="checkmark" secondary></ion-icon>
+          {{product.stock}} in stock
+        </ion-item>
+      </ion-list>
+      <button full primary (click)="addToCart(product)">
+        <ion-icon name="cart"></ion-icon>
+        Add to cart
+      </button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

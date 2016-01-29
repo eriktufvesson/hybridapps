@@ -1,0 +1,21 @@
+<ion-toolbar>
+  <ion-title>Add to cart</ion-title>
+  <ion-buttons end>
+    <button (click)="dismiss()">
+      <ion-icon name="close"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="card" primary></ion-icon>
+      {{product.price | currency:"USD":true}}
+    </ion-item>
+    <ion-item>
+      <ion-icon name="checkmark" secondary></ion-icon>
+      {{product.stock}} in stock
+    </ion-item>
+  </ion-list>
+</ion-content>
