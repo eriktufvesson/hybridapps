@@ -1,12 +1,15 @@
 import {IonicApp, Page, NavController, NavParams} from 'ionic/ionic';
-import {Navbar} from '../../components/navbar/navbar';
+import {NavbarButtons} from '../../components/navbar-buttons/navbar-buttons';
+import {ProductListItem} from '../../components/product-list-item/product-list-item';
 import {Products} from '../../providers/products/products';
 import {Filter} from '../../pipes/filter';
 import {ProductPage} from '../product/product';
+import {CartPage} from '../cart/cart';
+import {SearchPage} from '../search/search';
 
 @Page({
   templateUrl: 'build/pages/list/list.html',
-  directives: [Navbar],
+  directives: [NavbarButtons, ProductListItem],
   pipes: [Filter]
 })
 export class ListPage {
@@ -14,7 +17,9 @@ export class ListPage {
     this.nav = nav;
 
     // If we navigated to this page, we will have an item available as a nav param
-    this.selectedItem = navParams.get('item');
+    if (navParams.data) {
+      this.selectedItem = navParams.get('item');
+    }
 
     this.products = products.products;
   }
@@ -23,5 +28,13 @@ export class ListPage {
     this.nav.push(ProductPage, {
       product: product
     })
+  }
+  
+  navCart() {
+    this.nav.push(CartPage);
+  }
+  
+  navSearch() {
+    this.nav.push(SearchPage);
   }
 }

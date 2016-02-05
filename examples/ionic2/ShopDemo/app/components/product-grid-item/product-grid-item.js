@@ -3,17 +3,17 @@ import {IONIC_DIRECTIVES, NavController} from 'ionic/ionic';
 import {ProductPage} from '../../pages/product/product';
 
 @Component({
-  selector: 'product-list-item',
-  templateUrl: 'build/components/product-list-item/product-list-item.html',
+  selector: 'product-grid-item',
+  templateUrl: 'build/components/product-grid-item/product-grid-item.html',
   directives: [IONIC_DIRECTIVES] // makes all Ionic directives available to your component
 })
-export class ProductListItem {
+export class ProductGridItem {
   @Input() product;
   constructor(nav: NavController) {
     this.nav = nav;
   }
   
-  navProduct(evt, product) {
+  navProduct(product) {
     this.nav.push(ProductPage, {
       product: product
     });

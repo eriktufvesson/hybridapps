@@ -15,10 +15,16 @@ export class Filter {
     Takes a value and makes it lowercase.
    */
   transform(values, args) {
-    console.log('filter pipe', values, args, args.length, args[1]);
     let key = args && args.length > 0 ? args[0] : null;
     let value = args && args.length >= 1 ? args[1] : null;
-    console.log(key, value);
-    return values.filter((item) => item[key] === value);
+    let limitTo = args && args.length >= 2 ? args[2] : null;
+    
+    let result = values.filter((item) => item[key] === value);
+    
+    if (limitTo) {
+      result = result.slice(0, limitTo);
+    }
+    
+    return result;
   }
 }

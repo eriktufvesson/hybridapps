@@ -1,16 +1,15 @@
-<navbar pageTitle="Sale"></navbar>
+<ion-navbar *navbar primary>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>  
+  <ion-buttons end>
+    <navbar-buttons (cartClick)="navCart()" (searchClick)="navSearch()"></navbar-buttons>
+  </ion-buttons>  
+  <ion-title>Sale!</ion-title>
+</ion-navbar>
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="#product of products | filter:'sale':true" (click)="navProduct($event, product)">
-      <ion-avatar item-left>
-        <img [src]="product.imageUrl">
-      </ion-avatar>
-      <h2>{{product.name}}</h2>
-      <p>
-        <span class="sale-price">{{product.price | currency:'SEK'}}</span>
-        <span class="original-price">{{product.originalPrice | currency:'SEK'}}</span>
-      </p>
-    </ion-item>
+    <product-list-item *ngFor="#product of products | filter:'sale':true" [product]="product"></product-list-item>
   </ion-list>
 </ion-content>

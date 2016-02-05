@@ -1,6 +1,6 @@
 .home {
   
-  background-color: #EEE;
+  background-color: map-get($colors, lightprimary);
   
   // ion-card {
   //   margin: 0;
@@ -14,7 +14,7 @@
 }
 
 .product-description {
-    color: #959595;
+    color: map-get($colors, secondarytext);
     font-size: 12px;
     margin: 2px 0 0;
     text-overflow: ellipsis;
@@ -30,7 +30,7 @@
 }
 
 .shop-section-title .title-copy {
-    color: #515151;
+    color: map-get($colors, primarytext);
     height: 24px;
     line-height: 24px;
 }
@@ -39,7 +39,61 @@
   position: absolute;
   top: 0;
   right: 0;
-  background-color: rgba(255,0,0,0.8);
+  background-color: map-get($colors, accent);
   font-size: 1rem;
   padding: 3px 5px;
+}
+
+.sale-price {
+  color: map-get($colors, accent);
+  font-weight: bold;
+}
+
+.original-price {
+  color: map-get($colors, secondarytext);
+  text-decoration: line-through;
+  font-size: 1.2rem;
+}
+
+.normal-price {
+  color: map-get($colors, primarytext);
+}
+
+.ribbon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: map-get($colors, accent);
+  color: map-get($colors, text);
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 1.7rem;
+}
+
+ion-menu {
+  
+  background-image: url('../../img/menu-bg2.jpg');
+  background-size: cover;
+  
+  ion-toolbar {
+    .toolbar-background {
+      background: transparent !important;
+      border: 0 !important;
+    }
+  }
+  
+  ion-content {
+    background-color: transparent;
+    color: map-get($colors, text);
+    
+    button.item {
+      background-color: transparent;
+      color: map-get($colors, text);
+      border: 0 !important;
+      
+      .item-inner {
+        border: 0 !important;
+      }
+    }
+  }
 }

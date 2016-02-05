@@ -1,27 +1,29 @@
 import {Page, NavController, NavParams, Modal} from 'ionic/ionic';
-import {Cart} from '../cart/cartService';
-import {Navbar} from '../../components/navbar/navbar';
+import {NavbarButtons} from '../../components/navbar-buttons/navbar-buttons';
 import {AddToCartModal} from '../cart/cart';
+import {CartPage} from '../cart/cart';
 
 @Page({
   templateUrl: 'build/pages/product/product.html',
-  directives: [Navbar]
+  directives: [NavbarButtons]
 })
 export class ProductPage {
-  constructor(nav: NavController, params: NavParams, cart: Cart) {
+  constructor(nav: NavController, params: NavParams) {
     this.nav = nav;
     this.params = params;
-    this.cart = cart;
     
     this.product = params.get("product");
   }
   
   addToCart(product) {
-    //this.cart.add(product);
-    let addToCartModal = Modal.create(AddToCartModal);
+    let addToCartModal = Modal.create(AddToCartModal, { product: product });
     addToCartModal.onDismiss(data => {
       console.log(data);
     });
-    this.nav.present(addToCartModal, { product: product }); 
+    this.nav.present(addToCartModal); 
+  }
+  
+  navCart() {
+    this.nav.push(CartPage);
   }
 }

@@ -1,3 +1,4 @@
+import {Storage, LocalStorage} from 'ionic/ionic';
 import {Injectable} from 'angular2/core';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/share';
@@ -13,7 +14,12 @@ export class Cart {
       this._cartObserver = observer;
     });
     
-    this._products = [];
+    this.cartStorage = new Storage(LocalStorage);
+    
+    this.cartStorage.get('cartItems').then((products) => {
+      this._products = products ? JSON.parse(products) : [];
+      this._cartObserver.next(this._products);
+    });
   }
   
   getProducts() {
@@ -22,7 +28,21 @@ export class Cart {
   
   add(product) {
     this._products.push(product);
-    console.log(this._products);
+    this.updateCart();
+  }
+  
+  remove(product) {
+    this._products.splice(this._products.indexOf(product), 1);
+    this.updateCart();
+  }
+  
+  clear() {
+    this._products.splice(0, this._products.length);
+    this.updateCart();
+  }
+  
+  private updateCart() {
+    this.cartStorage.set('cartItems', JSON.stringify(this._products));
     this._cartObserver.next(this._products);
   }
 }

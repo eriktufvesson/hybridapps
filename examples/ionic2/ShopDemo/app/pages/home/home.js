@@ -1,15 +1,16 @@
 import {Page, NavController} from 'ionic/ionic';
 import {ListPage} from '../list/list';
 import {GridPage} from '../grid/grid';
-import {Navbar} from '../../components/navbar/navbar';
+import {CartPage} from '../cart/cart';
+import {SearchPage} from '../search/search';
+import {NavbarButtons} from '../../components/navbar-buttons/navbar-buttons';
+import {ProductGridItem} from '../../components/product-grid-item/product-grid-item';
 import {Products} from '../../providers/products/products';
-import {NgFor} from 'angular2/common';
-import {ProductListItem} from '../../components/product-list-item/product-list-item';
 import {Filter} from '../../pipes/filter';
 
 @Page({
   templateUrl: 'build/pages/home/home.html',
-  directives: [Navbar, NgFor, ProductListItem],
+  directives: [NavbarButtons, ProductGridItem],
   pipes: [Filter]
 })
 export class HomePage {
@@ -24,5 +25,13 @@ export class HomePage {
   
   navSale() {
     this.nav.push(ListPage);
+  }
+  
+  navCart() {
+    this.nav.push(CartPage);
+  }
+  
+  navSearch() {
+    this.nav.push(SearchPage);
   }
 }
