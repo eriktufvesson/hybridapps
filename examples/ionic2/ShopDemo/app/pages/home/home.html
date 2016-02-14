@@ -5,7 +5,7 @@
   <ion-buttons end>
     <navbar-buttons (cartClick)="navCart()" (searchClick)="navSearch()"></navbar-buttons>
   </ion-buttons>
-  <ion-title>Shop</ion-title>
+  <ion-title>TechShop</ion-title>
 </ion-navbar>
 
 <ion-content class="home">
@@ -21,8 +21,8 @@
     </ion-col>
   </ion-row>
   <div class="item item-divider shop-section-title">
-    <span class="title-copy">Popular Now</span>
-    <a class="button button-small button-dark section-action" (click)="navPopular()">More</a>
+    <span class="title-copy">Popular products</span>
+    <button accent class="button button-small button-dark section-action" (click)="navPopular()">More</button>
   </div>
   <product-grid-item *ngFor="#product of products | filter:'popular':true:4" [product]="product"></product-grid-item>
 </ion-content>

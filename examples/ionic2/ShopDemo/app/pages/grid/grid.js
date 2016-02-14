@@ -7,20 +7,26 @@ import {CartPage} from '../cart/cart';
 import {SearchPage} from '../search/search';
 
 @Page({
-  templateUrl: 'build/pages/grid/grid.html',
-  directives: [NavbarButtons, ProductGridItem],
-  pipes: [Filter]
+    templateUrl: 'build/pages/grid/grid.html',
+    directives: [NavbarButtons, ProductGridItem],
+    pipes: [Filter]
 })
 export class GridPage {
-  constructor(products: Products) {
-    this.products = products.products;
-  }
-  
-  navCart() {
-    this.nav.push(CartPage);
-  }
-  
-  navSearch() {
-    this.nav.push(SearchPage);
-  }
+    constructor(products: Products) {
+        this.productService = products;
+    }
+
+    ngOnInit() {
+        this.productService.all().subscribe(
+            data => this.products = data
+            );
+    }
+
+    navCart() {
+        this.nav.push(CartPage);
+    }
+
+    navSearch() {
+        this.nav.push(SearchPage);
+    }
 }

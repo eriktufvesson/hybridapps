@@ -13,6 +13,12 @@
   margin: 2.5%;
 }
 
+.product-name {
+    text-overflow: ellipsis;    
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .product-description {
     color: map-get($colors, secondarytext);
     font-size: 12px;
@@ -24,15 +30,20 @@
 
 .shop-section-title {
     background-color: transparent;
-    border: none;
-    padding: 10px 10px 0;
+    // border: none;
+    padding: 10px 10px;
     font-size: 14px;
+    border-top: 1px solid map-get($colors, primary);
+    background-color: lighten(map-get($colors, primary), 10);
+    
 }
 
 .shop-section-title .title-copy {
-    color: map-get($colors, primarytext);
+    color: map-get($colors, text);
     height: 24px;
     line-height: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .cart-badge {
@@ -57,6 +68,12 @@
 
 .normal-price {
   color: map-get($colors, primarytext);
+}
+
+product-grid-item {
+    ion-card {
+        position: relative;
+    }
 }
 
 .ribbon {

@@ -6,46 +6,52 @@ import {ProductListItem} from '../../components/product-list-item/product-list-i
 import {NavbarButtons} from '../../components/navbar-buttons/navbar-buttons';
 
 @Page({
-  templateUrl: 'build/pages/search/search.html',
-  directives: [ProductListItem, NavbarButtons]
+    templateUrl: 'build/pages/search/search.html',
+    directives: [ProductListItem, NavbarButtons]
 })
 export class SearchPage {
-  constructor(nav: NavController, products: Products) {
-    this.nav = nav;
-    this.products = products.products;
+    constructor(nav: NavController, products: Products) {
+        this.nav = nav;
+        this.productService = products;
 
-    this.searchQuery = '';
-    this.initializeSearch();
-  }
-
-  initializeSearch() {
-    this.searchResults = [];
-  }
-
-  search(searchbar) {
-    // set q to the value of the searchbar
-    var q = searchbar.value;
-
-    // if the value is an empty string don't filter the items
-    if (q.trim() == '') {
-      return;
+        this.searchQuery = '';
+        this.initializeSearch();
     }
 
-    this.searchResults = this.products.filter((v) => {
-      if (v.name.toLowerCase().indexOf(q.toLowerCase()) > -1) {
-        return true;
-      }
-      return false;
-    });
-  }
+    ngOnInit() {
+        this.productService.all().subscribe(
+            data => this.products = data
+            );
+    }
 
-  navProduct(product) {
-    this.nav.push(ProductPage, {
-      product: product
-    });
-  }
-  
-  navCart() {
-    this.nav.push(CartPage);
-  }
+    initializeSearch() {
+        this.searchResults = [];
+    }
+
+    search(searchbar) {
+        // set q to the value of the searchbar
+        var q = searchbar.value;
+
+        // if the value is an empty string don't filter the items
+        if (q.trim() == '') {
+            return;
+        }
+
+        this.searchResults = this.products.filter((v) => {
+            if (v.name.toLowerCase().indexOf(q.toLowerCase()) > -1) {
+                return true;
+            }
+            return false;
+        });
+    }
+
+    navProduct(product) {
+        this.nav.push(ProductPage, {
+            product: product
+        });
+    }
+
+    navCart() {
+        this.nav.push(CartPage);
+    }
 }

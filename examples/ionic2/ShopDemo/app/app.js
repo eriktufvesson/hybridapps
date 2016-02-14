@@ -10,7 +10,8 @@ import {Products} from './providers/products/products';
 @App({
   templateUrl: 'build/app.html',
   config: {},
-  providers: [Cart, Products]
+  providers: [Cart, Products],
+  prodMode: true
 })
 export class MyApp {
   constructor(platform: Platform, app: IonicApp) {
