@@ -110,8 +110,8 @@ body {
 }
 
 .demo.android iframe {
-  width: 375px;
-  height: 627px;
+  width: 436px;
+  height: 700px;
 }
 
 .demo.ios {
@@ -119,8 +119,8 @@ body {
 }
 
 .demo.ios iframe {
-  width: 375px;
-  height: 627px;
+  width: 436px;
+  height: 700px;
 }
 
 .react-demo {
