@@ -70,10 +70,23 @@
   color: map-get($colors, primarytext);
 }
 
+.grid-outer-padding {
+  padding: 10px;
+}
+
 product-grid-item {
-    ion-card {
-        position: relative;
+  .grid-item-container {
+    position: relative;
+    
+    ion-badge {
+      position: absolute;
+      left: 5px;
+      top: 5px;
     }
+  }
+  ion-card {
+    position: relative;
+  }
 }
 
 .ribbon {
@@ -85,6 +98,7 @@ product-grid-item {
   padding: 4px;
   border-radius: 4px;
   font-size: 1.7rem;
+  z-index: 50;
 }
 
 ion-menu {

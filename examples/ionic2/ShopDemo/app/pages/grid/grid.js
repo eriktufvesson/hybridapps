@@ -1,4 +1,4 @@
-import {Page} from 'ionic/ionic';
+import {Page, NavController} from 'ionic/ionic';
 import {NavbarButtons} from '../../components/navbar-buttons/navbar-buttons';
 import {ProductGridItem} from '../../components/product-grid-item/product-grid-item';
 import {Products} from '../../providers/products/products';
@@ -12,8 +12,9 @@ import {SearchPage} from '../search/search';
     pipes: [Filter]
 })
 export class GridPage {
-    constructor(products: Products) {
+    constructor(products: Products, nav: NavController) {
         this.productService = products;
+        this.nav = nav;
     }
 
     ngOnInit() {

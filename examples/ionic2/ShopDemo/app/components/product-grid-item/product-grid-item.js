@@ -9,6 +9,7 @@ import {ProductPage} from '../../pages/product/product';
 })
 export class ProductGridItem {
   @Input() product;
+  @Input() popularity;
   constructor(nav: NavController) {
     this.nav = nav;
   }

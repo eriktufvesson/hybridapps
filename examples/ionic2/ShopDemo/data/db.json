@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Sony headphones",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum dolor vitae sapien dictum, eget efficitur eros molestie. Duis vulputate magna quis nisi feugiat tristique. Aenean quis odio eget ante tristique volutpat et non magna. Donec vitae accumsan sapien. Nam in elementum justo, eu consectetur libero",
+      "description": "No distracting background noise. No annoying cables. Just pure, authentic sound. Get ready to lose yourself in the music.",
       "imageUrl": "img/sample_images/products/1.jpeg",
       "price": 99,
       "stock": 10,
@@ -14,7 +14,7 @@
     {
       "id": 2,
       "name": "Disc spinner Pro",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum dolor vitae sapien dictum, eget efficitur eros molestie. Duis vulputate magna quis nisi feugiat tristique. Aenean quis odio eget ante tristique volutpat et non magna. Donec vitae accumsan sapien. Nam in elementum justo, eu consectetur libero",
+      "description": "The NW-ZX2 is an exercise in quality. Enjoy High-Resolution Audio to its fullest, optimized through S-Master™ HX technology. Even compressed audio files are upscaled closer to High-Resolution Audio with DSEE HX™ for a rich studio sound.",
       "imageUrl": "img/sample_images/products/2.jpeg",
       "price": 249,
       "stock": 0,
@@ -25,7 +25,7 @@
     {
       "id": 3,
       "name": "65 inch LED TV",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum dolor vitae sapien dictum, eget efficitur eros molestie. Duis vulputate magna quis nisi feugiat tristique. Aenean quis odio eget ante tristique volutpat et non magna. Donec vitae accumsan sapien. Nam in elementum justo, eu consectetur libero",
+      "description": "Thanks to our ingenious Slim Backlight Drive™, this 4K HDR television offers breathtaking picture quality in a super thin design.",
       "imageUrl": "img/sample_images/products/3.jpeg",
       "price": 699,
       "stock": 99,
@@ -36,7 +36,7 @@
     {
       "id": 4,
       "name": "Vintage laptop",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum dolor vitae sapien dictum, eget efficitur eros molestie. Duis vulputate magna quis nisi feugiat tristique. Aenean quis odio eget ante tristique volutpat et non magna. Donec vitae accumsan sapien. Nam in elementum justo, eu consectetur libero",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum dolor vitae sapien dictum, eget efficitur eros molestie. Duis vulputate magna quis nisi feugiat tristique.",
       "imageUrl": "img/sample_images/products/4.jpeg",
       "price": 100,
       "stock": 5,
@@ -47,7 +47,7 @@
     {
       "id": 5,
       "name": "Sony MP3 Player",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum dolor vitae sapien dictum, eget efficitur eros molestie. Duis vulputate magna quis nisi feugiat tristique. Aenean quis odio eget ante tristique volutpat et non magna. Donec vitae accumsan sapien. Nam in elementum justo, eu consectetur libero",
+      "description": "With the E380 series, you can take your music on the go without any compromise in quality. This Walkman® MP3/video player has Clear Audio technologies that deliver consistent clarity and rich sound with all your music. A compact design makes it perfect for your pocket, with up to 16GB of memory and 30 hours of music playback.",
       "imageUrl": "img/sample_images/products/5.jpeg",
       "price": 20,
       "stock": 99,
@@ -58,7 +58,7 @@
     {
       "id": 6,
       "name": "Mega bass ear-plugs",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum dolor vitae sapien dictum, eget efficitur eros molestie. Duis vulputate magna quis nisi feugiat tristique. Aenean quis odio eget ante tristique volutpat et non magna. Donec vitae accumsan sapien. Nam in elementum justo, eu consectetur libero",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum dolor vitae sapien dictum, eget efficitur eros molestie. Duis vulputate magna quis nisi feugiat tristique.",
       "imageUrl": "img/sample_images/products/6.jpeg",
       "price": 100,
       "stock": 5,
@@ -69,7 +69,7 @@
     {
       "id": 7,
       "name": "iPad Air 2",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum dolor vitae sapien dictum, eget efficitur eros molestie. Duis vulputate magna quis nisi feugiat tristique. Aenean quis odio eget ante tristique volutpat et non magna. Donec vitae accumsan sapien. Nam in elementum justo, eu consectetur libero",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum dolor vitae sapien dictum, eget efficitur eros molestie. Duis vulputate magna quis nisi feugiat tristique.",
       "imageUrl": "img/sample_images/products/7.jpeg",
       "price": 249,
       "stock": 5,
@@ -79,7 +79,7 @@
     {
       "id": 8,
       "name": "iPhone ear-plugs",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum dolor vitae sapien dictum, eget efficitur eros molestie. Duis vulputate magna quis nisi feugiat tristique. Aenean quis odio eget ante tristique volutpat et non magna. Donec vitae accumsan sapien. Nam in elementum justo, eu consectetur libero",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum dolor vitae sapien dictum, eget efficitur eros molestie. Duis vulputate magna quis nisi feugiat tristique.",
       "imageUrl": "img/sample_images/products/8.jpeg",
       "price": 25,
       "stock": 5,
@@ -87,14 +87,63 @@
       "popular": true
     }
   ],
+  "likes": [
+    {
+      "id": 1,
+      "productId": 1,
+      "userId": 1
+    },
+    {
+      "id": 1,
+      "productId": 2,
+      "userId": 1
+    },
+    {
+      "productId": 3,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "productId": 4,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "productId": 5,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "productId": 2,
+      "userId": 1,
+      "id": 5
+    }
+  ],
   "comments": [
     {
       "id": 1,
       "body": "some comment",
-      "postId": 1
+      "productId": 1
+    },
+    {
+      "id": 2,
+      "body": "some other comment",
+      "productId": 1
+    },
+    {
+      "id": 3,
+      "body": "some comment",
+      "productId": 2
+    },
+    {
+      "id": 4,
+      "body": "some other comment",
+      "productId": 3
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "users": {
+    "id": 1,
+    "name": "Adam Bertilsson"
+  },
+  "orders": []
 }
