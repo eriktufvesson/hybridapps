@@ -1,4 +1,4 @@
-import {Page, NavController} from 'ionic-angular';
+import {Page, NavController, Loading} from 'ionic-angular';
 import {OnInit} from 'angular2/core';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/Rx';
@@ -11,28 +11,30 @@ import {Cat} from '../../models/cat';
   providers: [CatService]
 })
 export class CatsPage implements OnInit {
-  
+
   public cats: Array<Cat> = [];
   public catsLoaded = false;
   public isLoading = true;
-  
-  constructor(public nav: NavController, private _catService: CatService) {}
-  
+
+  constructor(public nav: NavController, private _catService: CatService) { }
+
   ngOnInit() {
     this.catsLoaded = false;
-    
+    let loading = this.presentLoading();
+
     this._catService.getCats()
       .subscribe(cats => {
         this.cats = cats;
         this.catsLoaded = true;
         this.isLoading = false;
+        loading.dismiss();
       });
   }
-  
+
   viewCat(cat) {
-    this.nav.push(CatDetailPage, {cat: cat});
+    this.nav.push(CatDetailPage, { cat: cat });
   }
-  
+
   doInfinite(infiniteScroll) {
     this._catService.getCats()
       .subscribe(moreCats => {
@@ -40,5 +42,14 @@ export class CatsPage implements OnInit {
         moreCats.forEach(cat => self.cats.push(cat));
         infiniteScroll.complete();
       });
+  }
+
+  presentLoading() {
+    let loading = Loading.create({
+      content: "Cats are coming..."
+    });
+    this.nav.present(loading);
+    
+    return loading;
   }
 }

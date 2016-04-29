@@ -7,7 +7,7 @@ import {OnInit} from 'angular2/core';
 export class CatDetailPage implements OnInit {
   cat: any;
   
-  constructor(public navParams: NavParams) {}
+  constructor(private navParams: NavParams, private nav: NavController) {}
   
   ngOnInit() {
     this.cat = this.navParams.get('cat');
