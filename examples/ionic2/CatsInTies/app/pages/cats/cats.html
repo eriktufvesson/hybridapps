@@ -1,0 +1,11 @@
+<ion-navbar *navbar primary>
+  <ion-title>Cats In Ties</ion-title>
+</ion-navbar>
+
+<ion-content padding class="cats">
+  <div *ngFor="#cat of cats" (click)="viewCat(cat)" class="square" [ngStyle]="{'background-image': 'url(' + cat.url + ')'}"></div>
+
+  <ion-infinite-scroll (infinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
